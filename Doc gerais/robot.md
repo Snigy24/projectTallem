@@ -4,7 +4,10 @@ robot 8200
 #nome:
 Robot 8200
 
-#caracteristicas fisicas:
+# tipo de personagem
+servo do cientista
+
+#caracteristicas "fisicas":
 - braços amoviveis
 - Troca de cores
 - paira no ar
@@ -26,4 +29,21 @@ Enobot, construído pelo Dr. Brown, apenas tem um único fim, procurar as runas.
 
 - braços extensiveis que permite tentar apanhar o jogador
 - sensor de movimento que ao detectar o jogador vai o perseguir [ate o apanhar/ate um limite]
-- poderá ser facilmente "desligado" se o jogador usar a runa "lazguz"(agua) nele. 
+- poderá ser facilmente "desligado" se o jogador usar a runa "lazguz"(agua) nele.
+
+
+# pergunta 10
+O robot irá ter duas componentes uma mais clean e outra mais rusty.
+
+# pergunta 14
+Enquanto no inicio do jogo irá ser meramente um obstaculo ao jogador, em termos de passagem/obstrução de caminhos, a medida que se avança no jogo, tornase-a mais agressivo.
+
+Composto por 3 fases:
+- obstaculo a ser ultrapassado em que se mantem numa posição fisica ou efectua patrol
+- torna-se agressivo e persegue o jogador
+- persegue o jogador e pode "disparar" os braços para tentar agarrar o jogador
+
+# referencias
+
+- eva do wall-e 
+- invader zim 
