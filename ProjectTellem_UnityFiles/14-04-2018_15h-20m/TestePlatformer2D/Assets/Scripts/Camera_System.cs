@@ -16,13 +16,7 @@ public class Camera_System : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y >= -30)
-        {
-            transform.position = new Vector3(player.transform.position.x, yMapaFuturo, transform.position.z);
-        }
-        if (player.transform.position.y < -30)
-        {
-            transform.position = new Vector3(player.transform.position.x, yMapaPassado, transform.position.z);
-        }
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
     }
 }

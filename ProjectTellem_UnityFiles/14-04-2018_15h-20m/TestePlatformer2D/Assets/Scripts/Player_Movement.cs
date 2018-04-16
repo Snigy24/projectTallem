@@ -10,6 +10,7 @@ public class Player_Movement : MonoBehaviour {
     // Jump vars
     public bool midjump = false;
     public int playerJump = 1250;
+    public bool isgrounded = false;
 
     // Movement vars
     public int playerSpeed = 10;
@@ -24,6 +25,29 @@ public class Player_Movement : MonoBehaviour {
     void Update() {
         PlayerMove();
         PlayerTeleport();
+        if ((isgrounded == true) && (Input.GetKeyDown("space")))
+        {
+            PlayerJump();
+        }
+    }
+
+    //Jump detection
+    void OnCollisionEnter2D(Collision2D Col)
+    {
+        if (Col.gameObject.tag == "Ground")
+        {
+            isgrounded = true;
+            print("Grounded");
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D Col)
+    {
+        if (Col.gameObject.tag == "Ground")
+        {
+            isgrounded = false;
+            print("Not Grounded");
+        }
     }
 
     void PlayerMove()
@@ -32,17 +56,6 @@ public class Player_Movement : MonoBehaviour {
 
         //Move
         moveX = Input.GetAxis("Horizontal");
-
-        if (GetComponent<Rigidbody2D>().velocity.y == 0)
-        {
-            midjump = false;
-        }
-
-        if (Input.GetButtonDown("Jump") && (midjump == false))
-        {
-            PlayerJump();
-            midjump = true;
-        }
 
         //Animations
         //Facing direction
