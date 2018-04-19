@@ -14,7 +14,7 @@ public class Player_Movement : MonoBehaviour {
 
     // Movement vars
     public int playerSpeed = 10;
-    private bool facingRight = false;
+    public bool facingRight = false;
     private float moveX;
 
     // Cooldown vars
@@ -37,7 +37,7 @@ public class Player_Movement : MonoBehaviour {
         if (Col.gameObject.tag == "Ground")
         {
             isgrounded = true;
-            print("Grounded");
+            // print("Grounded");
         }
     }
 
@@ -46,7 +46,7 @@ public class Player_Movement : MonoBehaviour {
         if (Col.gameObject.tag == "Ground")
         {
             isgrounded = false;
-            print("Not Grounded");
+            // print("Not Grounded");
         }
     }
 
